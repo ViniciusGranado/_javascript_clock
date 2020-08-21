@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Space+Mono&display=swap');
+/* Font reference: 
+font-family: 'Baloo Tamma 2', cursive;
+font-family: 'Space Mono', monospace;
+*/
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #34495e;/*night*/
+  background-color: #f1c40f;/*morning*/
+  background-color: #3498db;/*afternoon*/
+}
+main {
+  color: #FFF;
+  height: 500px;
+  margin: 50px auto 0;
+  max-width: 1200px;
+  position: relative;
+  width: 80%;
+}
+.background {
+  background-image: url('../images/afternoon.jpg');
+  background-position: center;
+  border-radius: 20px;
+  height: 100%;
+  opacity: .5;
+  position: absolute;
+  width: 100%;
+}
+.content {
+  font-size: 65px;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  font-family: 'Baloo Tamma 2', cursive;
+  font-size: 70px;
+  padding: 60px;
+}
+.dataContainer {
+  font-family: 'Space Mono', monospace;
+}
