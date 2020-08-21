@@ -21,13 +21,13 @@ function setClockHtml () {
 
   if (currentHour >= 12 && currentHour <= 17) {
     document.body.style.backgroundColor = '#3498DB';
-    background.style.backgroundImage = "url('../images/afternoon.jpg')";
-  } else if ((currentHour >= 18 && currentHour <= 23) || currentHour >= 0 && currentHour <= 5) {
+    background.style.backgroundImage = "url('./images/afternoon.jpg')";
+  } else if ((currentHour >= 18 && currentHour <= 23) || (currentHour >= 0 && currentHour <= 5)) {
     document.body.style.backgroundColor = '#34495E';
-    background.style.backgroundImage = "url('../images/night.jpg')";
+    background.style.backgroundImage = "url('./images/night.jpg')";
   } else {
     document.body.style.backgroundColor = '#F1C40F';
-    background.style.backgroundImage = "url('../images/morning.jpg')";
+    background.style.backgroundImage = "url('./images/morning.jpg')";
   };
 
   clockParagraph.innerHTML = (`${dateObject.getHours().toString().padStart(2, '0')}:${dateObject.getMinutes().toString().padStart(2, '0')}:${dateObject.getSeconds().toString().padStart(2, '0')}`);
