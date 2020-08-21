@@ -7,11 +7,11 @@ font-family: 'Space Mono', monospace;
 * {
   box-sizing: border-box;
 }
-body {
-  background-color: #3498db;/*afternoon*/
-  background-color: #f1c40f;/*morning*/
-  background-color: #34495e;/*night*/
-}
+/* body {
+  background-color: #3498db;
+  background-color: #f1c40f;
+  background-color: #34495e;
+} */
 main {
   color: #FFF;
   height: 90vh;
@@ -25,7 +25,7 @@ main {
   background-position: center;
   border-radius: 20px;
   height: 100%;
-  opacity: .5;
+  opacity: 0.5;
   position: absolute;
   width: 100%;
   background-repeat: no-repeat;
