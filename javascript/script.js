@@ -1,9 +1,9 @@
 /* eslint-disable semi */
 
-const clockParagraph = document.querySelector('p.clock')
-const dateParagraph = document.querySelector('p.date')
-const todayParagraph = document.querySelector('p.today')
-const background = document.querySelector('div.background');
+const clockParagraph = document.querySelector('.clock');
+const dateParagraph = document.querySelector('.date');
+const todayParagraph = document.querySelector('.today');
+const background = document.querySelector('.background');
 
 let dateObject;
 
@@ -12,24 +12,26 @@ setDateHtml();
 setTodayHtml();
 
 const clock = setInterval(setClockHtml, 1000);
-const date = setInterval(setDateHtml, 1000)
+const date = setInterval(setDateHtml, 1000);
 const today = setInterval(setTodayHtml, 1000);
 
 function setClockHtml () {
   dateObject = new Date();
   const currentHour = dateObject.getHours();
 
-  if (currentHour >= 12 && currentHour <= 17) {
-    document.body.style.backgroundColor = '#3498DB';
-    background.style.backgroundImage = "url('./images/afternoon.jpg')";
-  } else if ((currentHour >= 18 && currentHour <= 23) || (currentHour >= 0 && currentHour <= 5)) {
-    document.body.style.backgroundColor = '#34495E';
-    background.style.backgroundImage = "url('./images/night.jpg')";
-  } else {
+  // BACKGROUND
+  if (currentHour >= 6  && currentHour <= 11) {
     document.body.style.backgroundColor = '#F1C40F';
     background.style.backgroundImage = "url('./images/morning.jpg')";
+  } else if (currentHour >= 12 && currentHour <= 17) {
+    document.body.style.backgroundColor = '#3498DB';
+    background.style.backgroundImage = "url('./images/afternoon.jpg')";
+  } else {
+    document.body.style.backgroundColor = '#34495E';
+    background.style.backgroundImage = "url('./images/night.jpg')";
   };
 
+  // HTML CLOCK
   clockParagraph.innerHTML = (`${dateObject.getHours().toString().padStart(2, '0')}:${dateObject.getMinutes().toString().padStart(2, '0')}:${dateObject.getSeconds().toString().padStart(2, '0')}`);
 }
 
