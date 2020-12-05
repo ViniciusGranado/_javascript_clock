@@ -49,6 +49,11 @@ h1 {
   font-family: 'Space Mono', monospace;
 }
 
+.today {
+  margin: 20px 0;
+}
+
+
 @media (min-width: 650px) {
   .content {
     font-size: 3.125rem;
@@ -56,5 +61,17 @@ h1 {
   
   h1 {
     font-size: 4.375rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  h1 {
+    font-size: 6rem;
   }
 }

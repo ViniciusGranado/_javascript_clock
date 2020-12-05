@@ -38,7 +38,7 @@ function setClockHtml () {
 function setDateHtml () {
   dateObject = new Date();
 
-  dateParagraph.innerHTML = `${dateObject.getDate()}/${dateObject.getMonth()+1}/${dateObject.getFullYear()}`;
+  dateParagraph.innerHTML = `${dateObject.getDate().toString().padStart(2, '0')}/${(dateObject.getMonth()+1).toString().padStart(2, '0')}/${dateObject.getFullYear()}`;
 }
 
 function setTodayHtml () {
